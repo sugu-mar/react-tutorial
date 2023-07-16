@@ -1,6 +1,6 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
+  /* text-align: center; */
 }
 
 /* .card {
@@ -23,5 +23,107 @@
 
 .cardContainer {
   padding: 1rem;
-  
 }
+
+/* movie component */
+
+.movie-list {
+  padding: 1em;
+  margin: 2em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(auto, 1.5fr);
+  justify-content: space-around;
+  grid-row-gap: 3em;
+}
+
+.movie-container {
+  padding: 1.5rem;
+  width: 250px;
+  border: 1px solid black;
+  justify-content: space-around;
+  box-shadow: 0 0 4px 1px black;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.movie-container:hover {
+  transform: scale(1.1);
+}
+
+.movie-poster {
+  width: 250px;
+  height: 450px;
+  object-fit: cover;
+}
+
+.movie-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.movie-title {
+  font-size: 18px;
+  margin: 0;
+}
+
+.movie-rating {
+  font-size: 18px;
+  margin: 0;
+}
+
+.movie-summary {
+  margin-top: 0;
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 1380px) {
+  .movie-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .movie-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .movie-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: space-around;
+  }
+}
+
+/* @media screen and (max-width: 308px) {
+  .movie-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 286px) {
+  .movie-list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(auto, 1fr);
+    justify-content: space-around;
+  }
+} */
